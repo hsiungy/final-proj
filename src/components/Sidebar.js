@@ -10,7 +10,8 @@ class Sidebar extends Component {
         }
     }
 
-    filter = e => {
+    filterMarkers = e => {
+        this.props.closeAllInfoWindows();
         const query = e.target.value;
         this.setState({query});
         const markers = this.props.venues.map(venue => {
@@ -35,7 +36,8 @@ class Sidebar extends Component {
     render() {
         return (
             <div className="sidebar">
-                <input type="search" id="search" placeholder="Filter" onChange={this.filter}></input>
+                <div className="title">San Francisco Cafés</div>
+                <input type="search" id="search" placeholder="Filter" onChange={this.filterMarkers}></input>
                 <List {...this.props} venues={this.filterItems()}/>
             </div>
         )

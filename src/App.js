@@ -65,7 +65,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Sidebar {...this.state} handleItemClick={this.handleItemClick}/>
+        <Sidebar {...this.state} handleItemClick={this.handleItemClick} closeAllInfoWindows={this.closeAllInfoWindows}/>
         <Map {...this.state} handleMarkerClick={this.handleMarkerClick}/>
       </div>
     );

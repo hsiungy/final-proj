@@ -29,6 +29,12 @@
   width: 25%;
 }
 
+.title {
+  padding: 10px;
+  border-style: solid;
+  border-width: thin;
+}
+
 #search {
   width: 100%;
   height: 2rem;
