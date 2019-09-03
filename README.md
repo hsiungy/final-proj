@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+||||||| merged common ancestors
+=======
+# final-proj
+Neighborhood Map Project for Udacity Front End Nanodegree
+>>>>>>> 4ac6f0aa12a1a7fd746b3a5920d22b9571ab1a4e
