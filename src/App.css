@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100vh;
+  display: flex;
 }
 
 .App-logo {
@@ -21,6 +23,31 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.sidebar {
+  width: 25%;
+}
+
+#search {
+  width: 100%;
+  height: 2rem;
+  font-size: 1rem;
+}
+
+.list {
+  padding: 0px;
+  margin: 0px;
+}
+
+li.item {
+  list-style: none;
+  font-size: 1rem;
+  padding: .5rem;
+  border-style: solid;
+  border-width: thin;
+  cursor: pointer;
+  margin-top: .5rem;
 }
 
 @keyframes App-logo-spin {
