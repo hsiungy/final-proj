@@ -3,12 +3,13 @@ import Sidebar from './components/Sidebar';
 import Map from './components/Map';
 import FoursquareAPI from './API/';
 import './App.css';
+import Hamburger_icon from './Hamburger_icon.svg.png';
 
 class App extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
+      showSidebar: true,
       venues: [],
       markers: [],
       center: [],
@@ -16,6 +17,20 @@ class App extends Component {
       setSuperState: obj => {
         this.setState(obj);
       }
+    }
+  }
+
+  toggleSidebar() {
+    this.setState({
+      showSidebar: !this.state.showSidebar
+    })
+  }
+
+  updateSidebar() {
+    if (window.innerWidth < 1024) {
+      this.setState({
+        showSidebar: false
+      })
     }
   }
 
@@ -41,6 +56,9 @@ class App extends Component {
     .catch(err => {
       console.log(err);
     });
+
+    this.updateSidebar();
+    window.addEventListener("resize", this.updateSidebar.bind(this));
   }
 
   handleMarkerClick = marker => {
@@ -65,8 +83,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Sidebar {...this.state} handleItemClick={this.handleItemClick} closeAllInfoWindows={this.closeAllInfoWindows}/>
-        <Map {...this.state} handleMarkerClick={this.handleMarkerClick}/>
+        {this.state.showSidebar && 
+          <Sidebar {...this.state} handleItemClick={this.handleItemClick} closeAllInfoWindows={this.closeAllInfoWindows}/>}
+        <div id="map">
+            <div className="hamburger">
+                <img src={Hamburger_icon} alt="Toggle sidebar" onClick={this.toggleSidebar.bind(this)}></img>
+            </div>
+          <Map {...this.state} handleMarkerClick={this.handleMarkerClick}/>
+        </div>
       </div>
     );
   }
