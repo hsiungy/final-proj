@@ -2,8 +2,8 @@ import axios from 'axios';
 
 const baseURL = 'https://api.foursquare.com/v2/venues/';
 const keys = {
-    client_id: '1IKFMHXSR15H0FFC1XBLXX2OAVZQENSZOZCD54LGQNBKIYLI',
-    client_secret: 'BEKO0XUZNGDZMETMECR4A1DCMBBD5GI3LPBVXTQ1GFRRCFH4',
+    client_id: '{YOUR_CLIENT_ID}',
+    client_secret: '{YOUR_CLIENT_SECRET}',
     v: '20190109'
 };
 

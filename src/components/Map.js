@@ -36,7 +36,7 @@ class Map extends Component {
         return (
             <MyMapComponent
                 {...this.props}
-                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAP6HLhyDjpJiTy4XKj7zLYAoN8ym_cl7E"
+                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key={YOUR_GOOGLE_MAPS_API_KEY}"
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={<div style={{ height: `100%`, width: `100%` }} />}
                 mapElement={<div style={{ height: `100%` }} />}
